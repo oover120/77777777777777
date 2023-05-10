@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Юг-Информ Сдача отчетности</string>
+
+    <string name="downloading_completed">Скачивание завершено</string>
+    <string name="button_install">Установить</string>
+    <string name="bg">bg</string>
+</resources>
