@@ -305,40 +305,20 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="0dp"
-                android:layout_marginEnd="10dp"
+                android:layout_marginEnd="0dp"
                 android:fontFamily="@font/montserrat"
-                android:text="Услуги:\n- Услуга 1\n- Услуга 2\n- Услуга 3\n- Услуга 4\n- Услуга 5"
-                android:textColor="@color/black"
+                android:text="Услуги:\n- Отправка в ФНС, ПФР, ФСС, Росстат\n- Выпуск электронной цифровой   подписи\n- Юридические услуги"                android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:textSize="16sp" />
 
             <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="206dp"
-                android:layout_height="142dp"
-                android:layout_marginStart="45dp"
-                android:layout_marginLeft="80dp"
-                android:layout_marginTop="26dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:srcCompat="@drawable/nalogi" />
-
-            <ImageView
                 android:id="@+id/imageView11"
-                android:layout_width="206dp"
-                android:layout_height="142dp"
+                android:layout_width="231dp"
+                android:layout_height="78dp"
                 android:layout_marginStart="45dp"
-                android:layout_marginLeft="80dp"
-                android:layout_marginTop="26dp"
-                app:srcCompat="@drawable/nalogi" />
-
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="206dp"
-                android:layout_height="142dp"
-                android:layout_marginStart="45dp"
-                android:layout_marginLeft="80dp"
-                android:layout_marginTop="26dp"
-                app:srcCompat="@drawable/nalogi" />
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="6dp"
+                app:srcCompat="@drawable/kak_poluchit_ecp" />
 
             <ImageView
                 android:id="@+id/imageView4"
@@ -346,7 +326,7 @@
                 android:layout_height="142dp"
                 android:layout_marginStart="45dp"
                 android:layout_marginLeft="80dp"
-                android:layout_marginTop="26dp"
+                android:layout_marginTop="6dp"
                 app:srcCompat="@drawable/nalogi" />
 
 

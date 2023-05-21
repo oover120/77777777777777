@@ -1,7 +1,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/bottom_sheet"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="@drawable/bottom_sheet_background"
     android:orientation="vertical">
 
@@ -22,19 +23,6 @@
             android:layout_height="500dp">
 
             <TextView
-                android:id="@+id/text_view1"
-                android:layout_width="325dp"
-                android:layout_height="53dp"
-                android:layout_below="@+id/text_view2"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="78dp"
-                android:layout_marginEnd="55dp"
-                android:fontFamily="@font/montserrat"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque, est at venenatis ultrices"
-                android:textColor="#3C3C3C"
-                android:textSize="16sp" />
-
-            <TextView
                 android:id="@+id/text_view2"
                 android:layout_width="315dp"
                 android:layout_height="match_parent"
@@ -43,22 +31,33 @@
                 android:layout_marginTop="84dp"
                 android:layout_marginEnd="61dp"
                 android:fontFamily="@font/montserrat"
-                android:text="Nullam vitae velit risus. Integer semper mauris non metus ullamcorper lacinia. Fusce congue sem a hendrerit pharetra"
+                android:text="Поможет грамотно и аккуратно заполнить декларацию 3 НДФЛ в наших офисах в соответствии с требованиями гражданского и налогового Кодекса."
                 android:textColor="#3C3C3C"
                 android:textSize="16sp" />
+
 
             <TextView
                 android:id="@+id/text_view3"
                 android:layout_width="315dp"
                 android:layout_height="match_parent"
-                android:layout_below="@+id/text_view1"
+                android:layout_below="@+id/imageView"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="79dp"
-                android:layout_marginEnd="56dp"
+                android:layout_marginTop="39dp"
+                android:layout_marginEnd="60dp"
                 android:fontFamily="@font/montserrat"
-                android:text="Nullam vitae velit risus. Integer semper mauris non metus ullamcorper lacinia. Fusce congue sem a hendrerit pharetra"
+                android:text=" Мы поможем не только разобраться в хитросплетениях официального бланка, но и сдать справку 3 ндфл в налоговую службу без лишних затрат времени. \tЧтобы процедура не стала для вас настоящим испытанием, воспользуйтесь помощью профессионалов."
                 android:textColor="#3C3C3C"
                 android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="238dp"
+                android:layout_height="217dp"
+                android:layout_below="@+id/text_view2"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="37dp"
+                android:layout_marginEnd="101dp"
+                app:srcCompat="@drawable/ndfl" />
 
 
         </RelativeLayout>
