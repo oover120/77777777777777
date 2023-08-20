@@ -44,6 +44,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         webView.settings.javaScriptEnabled = true
+        // Отключение эффекта растяжения при прокрутке вверх
+        webView.overScrollMode = WebView.OVER_SCROLL_NEVER
 
         // Load your desired URL
         val url = "https://cdn-nalog-app.ru"
