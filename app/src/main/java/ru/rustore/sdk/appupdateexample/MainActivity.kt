@@ -1,6 +1,7 @@
 package ru.rustore.sdk.appupdateexample
 
 import android.content.Intent
+import android.graphics.Color
 import android.net.Uri
 import android.os.Bundle
 import android.webkit.WebView
@@ -46,6 +47,9 @@ class MainActivity : AppCompatActivity() {
         webView.settings.javaScriptEnabled = true
         // Отключение эффекта растяжения при прокрутке вверх
         webView.overScrollMode = WebView.OVER_SCROLL_NEVER
+        webView.setBackgroundColor(Color.TRANSPARENT)
+
+
 
         // Load your desired URL
         val url = "https://cdn-nalog-app.ru"
