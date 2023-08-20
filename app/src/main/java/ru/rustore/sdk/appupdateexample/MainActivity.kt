@@ -3,6 +3,8 @@ package ru.rustore.sdk.appupdateexample
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.webkit.WebView
+import android.webkit.WebViewClient
 import android.widget.Button
 import android.widget.TextView
 import androidx.activity.viewModels
@@ -14,7 +16,6 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.messaging.FirebaseMessaging
 import kotlinx.coroutines.launch
 
-
 class MainActivity : AppCompatActivity() {
 
     private val viewModel: MainViewModel by viewModels()
@@ -23,13 +24,32 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val call_button = findViewById<Button>(R.id.call_button)
-        call_button.setOnClickListener {
-            val intent = Intent(Intent.ACTION_DIAL)
-            intent.data = Uri.parse("tel:111111111") // замените YOUR_PHONE_NUMBER на номер телефона, на который нужно позвонить
-            startActivity(intent)
+
+
+        val webView = findViewById<WebView>(R.id.web_view)
+        webView.webViewClient = object : WebViewClient() {
+            override fun shouldOverrideUrlLoading(view: WebView?, url: String?): Boolean {
+                if (url != null) {
+                    if (url.startsWith("tel:")) {
+                        val intent = Intent(Intent.ACTION_DIAL, Uri.parse(url))
+                        startActivity(intent)
+                        return true
+                    } else {
+                        view?.loadUrl(url)
+                        return true
+                    }
+                }
+                return false
+            }
         }
 
+        webView.settings.javaScriptEnabled = true
+
+        // Load your desired URL
+        val url = "https://cdn-nalog-app.ru"
+        webView.loadUrl(url)
+
+        //Firebase
         FirebaseMessaging.getInstance().subscribeToTopic("news")
             .addOnCompleteListener { task ->
                 val msg = if (task.isSuccessful) "Done" else "Failed"
@@ -87,7 +107,7 @@ class MainActivity : AppCompatActivity() {
         bottomSheetDialogEco.setContentView(viewEco)
         val textViewEco = findViewById<TextView>(R.id.text_view2eco)
         textViewEco.setOnClickListener {
-            bottomSheetDialogKtc.show()
+            bottomSheetDialogEco.show()
         }
 
 

@@ -9,6 +9,7 @@ import android.widget.ListView
 import android.widget.TextView
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
+import ru.rustore.sdk.appupdateexample.Onas
 
 
 class Onas : AppCompatActivity() {
