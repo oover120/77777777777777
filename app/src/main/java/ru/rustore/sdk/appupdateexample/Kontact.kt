@@ -103,48 +103,7 @@ class Page1 : AppCompatActivity() {
         }
 
 
-        val qrCodeImageView: ImageView = findViewById(R.id.qr_code_image_view)
 
-        val sharedPreferences: SharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE)
-        var uuidString = sharedPreferences.getString("UUID", "")
-
-        if (uuidString.isNullOrEmpty()) {
-            // Если UUID не сохранен в SharedPreferences, создаем новый и сохраняем его
-            val uuid: UUID = UUID.randomUUID()
-            uuidString = uuid.toString()
-            val editor: SharedPreferences.Editor = sharedPreferences.edit()
-            editor.putString("UUID", uuidString)
-            editor.apply()
-        }
-
-        // Используем сохраненный UUID вместо генерации нового
-        val text = "$uuidString Накопительная скидка"
-
-        // Задаем размеры QR-кода
-        val width = 650
-        val height = 650
-
-        // Задаем параметры для генерации QR-кода
-        val hints: MutableMap<EncodeHintType, Any> = HashMap()
-        hints[EncodeHintType.CHARACTER_SET] = "UTF-8"
-
-        // Генерируем QR-код из текста
-        try {
-            val writer = QRCodeWriter()
-            val bitMatrix: BitMatrix = writer.encode(text, BarcodeFormat.QR_CODE, width, height, hints)
-
-            // Преобразуем QR-код в Bitmap и выводим его в ImageView
-            val bitmap: Bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.RGB_565)
-            for (x in 0 until width) {
-                for (y in 0 until height) {
-                    bitmap.setPixel(x, y, if (bitMatrix[x, y]) 0xFF000000.toInt() else 0xFFFFFFFF.toInt())
-                }
-            }
-            qrCodeImageView.setImageBitmap(bitmap)
-
-        } catch (e: WriterException) {
-            e.printStackTrace()
-        }
 
     }
 
