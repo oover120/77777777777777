@@ -144,17 +144,16 @@
 
     <ListView
         android:id="@+id/list_view"
-        android:layout_width="239dp"
-        android:layout_height="304dp"
-        android:layout_above="@+id/qr_code_image_view"
+        android:layout_width="235dp"
+        android:layout_height="229dp"
+        android:layout_above="@+id/imageView4"
         android:layout_below="@+id/message"
         android:layout_alignParentStart="true"
         android:layout_marginStart="113dp"
         android:layout_marginLeft="@dimen/margin_start"
         android:layout_marginTop="12dp"
-        android:layout_marginEnd="@dimen/margin_end"
         android:layout_marginRight="@dimen/margin_end"
-        android:layout_marginBottom="41dp"
+        android:layout_marginBottom="27dp"
         android:fontFamily="@font/montserrat"
         android:scrollbars="vertical"
         android:textColor="#FF0000" />
@@ -179,11 +178,9 @@
         android:layout_width="266dp"
         android:layout_height="109dp"
         android:layout_above="@+id/call_button"
-        android:layout_below="@+id/list_view"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="-18dp"
         android:layout_marginEnd="33dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="2dp"
         app:srcCompat="@drawable/pict_2" />
 
 </RelativeLayout>
