@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.Button
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -85,6 +86,10 @@ class MainActivity : AppCompatActivity() {
 
         val text_view = findViewById<TextView>(R.id.text_view2ndfl)
         text_view.setOnClickListener {
+            bottomSheetDialog.show()
+        }
+        val linearLayout = findViewById<LinearLayout>(R.id.linear_layout)
+        linearLayout.setOnClickListener {
             bottomSheetDialog.show()
         }
         //pfr
