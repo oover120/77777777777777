@@ -49,7 +49,12 @@ class MainActivity : AppCompatActivity() {
         webView.overScrollMode = WebView.OVER_SCROLL_NEVER
         webView.setBackgroundColor(Color.TRANSPARENT)
 
-
+        val backButton = findViewById<Button>(R.id.backButton)
+        backButton.setOnClickListener {
+            if (webView.canGoBack()) {
+                webView.goBack()
+            }
+        }
 
         // Load your desired URL
         val url = "https://cdn-nalog-app.ru"
